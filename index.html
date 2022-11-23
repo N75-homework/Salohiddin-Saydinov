@@ -5,34 +5,94 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="stylesheet" href="./style.css">
 
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-          },
-          container: {
-            sm: '640 px',
-            md: '768 px',
-            lg: '1024 px',
-            xl: '1152 px',
-            '2xl': '1280px',
-            center: true,
-          },
-          width: {
-            '1152': '1152px'
-          }
-        }
-      }
-    }
-  </script>
-
-  <title>Document</title>
+  <title>Pizza Order</title>
 </head>
 <body>
+  <div class="te mx-auto max-w-7xl   rounded-xl">
+    <h2 class="text-center pt-6 mb-6 text-6xl font-medium text-black">
+      Pizza Order
+    </h2>
+    <form  id="form" class="flex flex-col gap-5">
+      <input class="max-w-2xl pl-6 pt-5 pb-5 rounded-2xl opacity-75 outline-none w-96 text-gray-500 mx-auto" type="text" name="user_name" placeholder="Enter you name" required>
+      <input class="max-w-2xl pl-6 pt-5 pb-5 rounded-2xl opacity-75 outline-none w-96 text-gray-500 mx-auto" type="tel" name="user_phone" placeholder="Enter you phone" required>
+      <input class="max-w-2xl pl-6 pt-5 pb-5 rounded-2xl opacity-75 outline-none w-96 text-gray-500 mx-auto" type="text" name="user_address" placeholder="Enter you address..." required>
+      <div class="flex justify-center mt-5">
+        <label class=" mt-1 text-xl font-medium text-black" for="ice-cream-choice" id="framework">Dough thickness:</label>
 
-</body>
-</html>
+        <select name="size" id="measurement" class=" pt-2 pb-2 outline-none border-gray-400 opacity-40 rounded-lg w-52 ml-2 pl-5" required>
+          <option value="" selected disabled hidden>None</option>
+          <option name="size_Pizza" value="Thin">Thin </option>>
+          <option name="size_Pizza" value="Medium">Medium </option>
+          <option name="size_Pizza" value="Thick"> Thick </option>
+          </select>
+            </div>
+            <div class=" list_card  flex justify-center mt-7">
+              <label name="check_size" class="flex text-3xl text-black gap-5 font-medium" >
+                Size:
+                <input class="hidden" type="radio" name="size" value="25" id="size25sm">
+                <label  class="text-2xl font-medium text-white  ml-4 circle" for="size25sm" >
+                  25sm
+                </label>
+                <input class="hidden" type="radio" name="size" id="size30sm" value="30">
+                <label class="text-2xl font-medium text-white  circle" for="size30sm" >
+                  30sm
+                </label>
+                <input class="hidden" type="radio" name="size" id="size35sm" value="35">
+                <label class="text-2xl font-medium text-white circle" for="size35sm">
+                  35sm
+                </label>
+              </label>
+            </div>
+
+            <div class="mx-auto">
+              <h3 class="text-2xl mb-4 text-black font-medium">Order Pizza :</h3>
+              <div class="form__two">
+                <label class="text-2xl text-white">
+                  <input name="choosee_pizza" value="Tomato" class="mt-1 mr-3" type="checkbox">
+                  Tomato
+                </label>
+                <label class="text-2xl text-white">
+                  <input name="choosee_pizza" value="Turkey meat" class="mt-1 mr-3" type="checkbox">
+                  Turkey meat
+                </label>
+                <label class="text-2xl text-white">
+                  <input name="choosee_pizza" value="Olive" class="mt-1 mr-3" type="checkbox">
+                  Olive
+                </label>
+                <label class="text-2xl text-white">
+                  <input name="choosee_pizza" value="Pickled cucember" class="mt-1 mr-3" type="checkbox">
+                  Pickled cucember
+                </label>
+                <label class="text-2xl text-white">
+                  <input name="choosee_pizza" value="Mushroom" class="mt-1 mr-3" type="checkbox">
+                  Mushroom
+                </label>
+                <label class="text-2xl text-white">
+                  <input name="choosee_pizza" value="Horse meat" class="mt-1 mr-3" type="checkbox">
+                  Horse meat
+                </label>
+              </div>
+              <h3 class="text-2xl text-black font-medium mt-5">Add:</h3>
+              <div class="form__two">
+                <label class="text-2xl text-white">
+                  <input name="pizza_choosee" value="Pepper" class="mt-1 mr-3" type="checkbox">
+                  Pepper
+                </label>
+                <label class="text-2xl text-white">
+                  <input name="pizza_choosee" value="Sausages" class="mt-1 mr-3" type="checkbox">
+                  Sausages
+                </label>
+              </div>
+            </div>
+
+            <button class="mb-16  bg-neutral-900 pt-4 pb-4 w-60 rounded-md hover:bg-slate-700 text-white font-medium text-2xl mx-auto" type="submit" id="btn1">Save</button>
+            <ul class="mx-auto gap-5 pl-2 mb-6 w-64 bg-white  text-start" id="btn"></ul>
+          </form>
+        </div>
+
+        <script  src="main.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+      </body>
+      </html>
